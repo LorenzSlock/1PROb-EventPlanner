@@ -1,0 +1,23 @@
+﻿<Window x:Class="EventPlanner.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:EventPlanner"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800" Loaded="Window_Loaded" >
+    <Grid>
+
+
+        <Label Content="Type event:" HorizontalAlignment="Left" Margin="57,46,0,0" VerticalAlignment="Top"/>
+        <ComboBox x:Name="typeComboBox" HorizontalAlignment="Left" Margin="57,77,0,0" VerticalAlignment="Top" Width="223"/>
+        <Label Content="Naam event: " HorizontalAlignment="Left" Margin="57,128,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="nameTextBox" HorizontalAlignment="Left" Margin="57,159,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="223"/>
+        <Label Content="Aantal bezoekers: " HorizontalAlignment="Left" Margin="57,212,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="visitorsTextBox" HorizontalAlignment="Left" Margin="57,243,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="223"/>
+        <ListBox x:Name="eventsListBox" Margin="350,55,38,92" Grid.ColumnSpan="2"/>
+        <Button x:Name="addButton" Content="Voeg event toe" HorizontalAlignment="Left" Margin="110,286,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.309,-0.906" Height="37" Width="136" Click="addButton_Click"/>
+        <Button x:Name="deleteButton" Content="Verwijder event" HorizontalAlignment="Left" Margin="110,343,0,0" VerticalAlignment="Top" Height="39" Width="136" Click="deleteButton_Click"/>
+
+    </Grid>
+</Window>
