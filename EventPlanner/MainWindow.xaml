@@ -5,8 +5,28 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:EventPlanner"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800" Loaded="Window_Loaded" >
-    <Grid>
+        Title="MainWindow" Height="500" Width="800" Loaded="Window_Loaded" Closing="Window_Closing" >
+    <DockPanel>
+        <Menu DockPanel.Dock="Top">
+            <MenuItem Header="Bestand">
+                <MenuItem Header="Afsluiten" Click="Onclose_Clicked"/>
+
+            </MenuItem>
+            <MenuItem Header="Events">
+                <MenuItem Header="Verwijder alle" Click="OndeleteAll_Clicked"/>
+                <MenuItem Header="Maak standaard" Click="OnCreateDefault_Clicked"/>
+            </MenuItem>
+        </Menu>
+        <StatusBar DockPanel.Dock="Bottom">
+            <StatusBarItem x:Name="quantityStatusBarItem" Content="Hier komt straks een aantal"/>
+            <StatusBarItem HorizontalAlignment="Right">
+                <Label x:Name="timeLabel" Content="Hier komt straks de tijd"/>
+            </StatusBarItem>
+        </StatusBar>
+        
+        
+        
+        <Grid>
 
 
         <Label Content="Type event:" HorizontalAlignment="Left" Margin="57,46,0,0" VerticalAlignment="Top"/>
@@ -20,4 +40,6 @@
         <Button x:Name="deleteButton" Content="Verwijder event" HorizontalAlignment="Left" Margin="110,343,0,0" VerticalAlignment="Top" Height="39" Width="136" Click="deleteButton_Click"/>
 
     </Grid>
+
+    </DockPanel>
 </Window>
